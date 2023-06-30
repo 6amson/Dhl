@@ -605,17 +605,42 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
-    background-color: hotpink;
 
-.firstPreFooterDiv{
-    background-color: indianred;
+    .firstPreFooterDiv{
+        display: flex;
+        // flex-wrap: wrap;
+
+        // p:first-child{
+        //     margin-right: 5px;
+        // }
+
+        p, span{
+            font-size: 30px;
+            font-weight: 600;
+            color: black;
+        }
+
+        span{
+            margin-left: 5px;
+            color: red;
+        }
+    }
+    
+    
+    .innerSecondPreFooterDiv{
+        width: 500%;
+        display: flex;
+        // grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+        // grid-row-gap: 10px;
+        // grid-column-gap: 20px;
+
+        .cardSecondPreFooterDiv{
+            background: yellow;
+            height: 400px;
+        }
+    }
 }
 
-.sliderPreFooterDiv{
-    background-color: khaki;
-    width: max-content;
-}
-}
 
 
 

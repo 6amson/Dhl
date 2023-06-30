@@ -109,30 +109,30 @@
           </div>
         </div>
 
-        <div ref="moreBody" v-show="showElement" class="secondPriContainer">
-          <div class="secondPriContainerDiv">
-            <div class="secondPriContainerPara">
-              <p>
-                We have various warehouses across countries facilitating the
-                storage of our clients packages. we understand the critical role
-                that warehousing plays in the logistics process. Our spacious
-                warehouses are strategically located in key transportation hubs,
-                allowing for easy access to major roads, ports, and airports.
-                This enables us to offer cost-effective and timely distribution
-                services to our clients.
-              </p>
-            </div>
-            <div class="secondPriContainerImage"></div>
-            <div class="secondPriContainerDiv2">
-              <p>DISCOVER</p>
-              <div>
-                <span class="material-symbols-sharp arrowEast">
-                  north_east
-                </span>
+          <div ref="moreBody" v-if="showElement" class="secondPriContainer">
+            <div class="secondPriContainerDiv">
+              <div class="secondPriContainerPara">
+                <p>
+                  We have various warehouses across countries facilitating the
+                  storage of our clients packages. we understand the critical
+                  role that warehousing plays in the logistics process. Our
+                  spacious warehouses are strategically located in key
+                  transportation hubs, allowing for easy access to major roads,
+                  ports, and airports. This enables us to offer cost-effective
+                  and timely distribution services to our clients.
+                </p>
+              </div>
+              <div class="secondPriContainerImage"></div>
+              <div class="secondPriContainerDiv2">
+                <p>DISCOVER</p>
+                <div>
+                  <span class="material-symbols-sharp arrowEast">
+                    north_east
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       <div class="subPriContainer">
@@ -216,39 +216,60 @@
 
     <div class="preFooterDiv">
       <div class="firstPreFooterDiv">
-        <p>Explore more</p>
-        <p>logistics products</p>
+        <p>Explore more<span>logistics products</span></p>
+        
       </div>
-      <swiper-container
-      class="sliderPreFooterDiv"
-      :modules="modules"
-        :slides-per-view="3"
-        :pagination="{ clickable: true }"
-        :scrollbar="{ draggable: true }"
-        :breakpoints="{
-          768: {
-            slidesPerView: 2,
-          },
-        }"
-      >
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-      </swiper-container>
+
+      <div class="secondPreFooterDiv">
+        <div class="innerSecondPreFooterDiv">
+          <div class="cardSecondPreFooterDiv">
+            <div>
+              <p>01</p>
+              <p>
+                <span class="material-symbols-sharp arrowEast">
+                  north_east
+                </span>
+              </p>
+            </div>
+            <div class="imageSecondPreFooterDiv"></div>
+            <p>Consulting & Management Services</p>
+          </div>
+
+          <div class="cardSecondPreFooterDiv">
+            <div>
+              <p>02</p>
+              <p>
+                <span class="material-symbols-sharp arrowEast">
+                  north_east
+                </span>
+              </p>
+            </div>
+            <div class="imageSecondPreFooterDiv"></div>
+            <p>Integrated Logistics</p>
+          </div>
+
+          <div class="cardSecondPreFooterDiv">
+            <div>
+              <p>03</p>
+              <p>
+                <span class="material-symbols-sharp arrowEast">
+                  north_east
+                </span>
+              </p>
+            </div>
+            <div class="imageSecondPreFooterDiv"></div>
+            <p>Transportation and Reliance</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable */ 
 import Header from "../components/Header.vue";
 import { ref } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 const moreTitle = ref(null);
 const moreTitle2 = ref(null);
@@ -256,14 +277,11 @@ const moreTitle3 = ref(null);
 const moreArrow = ref(null);
 const moreArrow2 = ref(null);
 const moreArrow3 = ref(null);
-const moreBody = ref(null);
 
 export default {
   name: "HomePage",
   components: {
     Header,
-    Swiper,
-    SwiperSlide,
   },
   data() {
     return {
@@ -289,8 +307,6 @@ export default {
         this.$refs.moreArrow.style.color = "#ffcc00";
         this.$refs.moreTitle.style.transition = " color .5s ease-out";
         this.$refs.moreTitle.style.color = "#ffcc00";
-        this.$refs.moreBody.style.transition =
-          "visibility 5s ease, display 1s ease";
         // console.log(this.$refs.moreTitle.style);
       } else {
         this.$refs.moreArrow.style.rotate = "";
