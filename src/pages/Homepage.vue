@@ -216,7 +216,8 @@
 
     <div class="preFooterDiv">
       <div class="firstPreFooterDiv">
-        <p>Explore more<span>logistics products</span></p>
+        <p>Explore more</p>
+        <span>Logistics products</span>
         
       </div>
 
@@ -260,15 +261,31 @@
             <div class="imageSecondPreFooterDiv"></div>
             <p>Transportation and Reliance</p>
           </div>
+
+          <div class="cardSecondPreFooterDiv">
+            <div>
+              <p>04</p>
+              <p>
+                <span class="material-symbols-sharp arrowEast">
+                  north_east
+                </span>
+              </p>
+            </div>
+            <div class="imageSecondPreFooterDiv"></div>
+            <p>Borderless Delivery</p>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="footerDiv"><Footer/></div>
   </div>
 </template>
 
 <script>
 /* eslint-disable */ 
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue"
 import { ref } from "vue";
 
 const moreTitle = ref(null);
@@ -282,6 +299,7 @@ export default {
   name: "HomePage",
   components: {
     Header,
+    Footer,
   },
   data() {
     return {
