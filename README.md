@@ -1,3 +1,7 @@
+##About
+###Dhl courier site remodel website following the re-design of Mariya ###Tonkoshkur on Behance. Built with Vue js, gsap and sass.
+```
+
 # dhl
 
 ## Project setup
