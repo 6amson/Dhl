@@ -64,7 +64,7 @@
 }
 
 .subMainInput{
-    min-width: 270px;
+    min-width: 300px;
     width: 700px;
     border: none;
     background: transparent;
@@ -328,7 +328,7 @@
     top: 251px;
     z-index: 1000;
     display: grid;
-    margin: 128px $spacing 0 $spacing;
+    margin: 0 $spacing 0 $spacing;
     grid-template-columns: repeat(4, minmax(250px, 1fr));
     grid-template-rows: repeat(3, minmax(250px, 1fr));
 
@@ -770,8 +770,8 @@
     .gridMenu2{
         position: relative;
         top: 350px;
-        margin: 128px $spacing 0 $spacing;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: -128px $spacing 0 $spacing;
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
         grid-template-rows: repeat(3, minmax(300px, 1fr));
     
         div{
@@ -859,7 +859,7 @@
     }
 
     .gridMenu2{
-        margin: 128px $spacing 0 $spacing;
+        margin: -128px $spacing 0 $spacing;
 
         div{
            border: solid black 3px;
@@ -994,6 +994,14 @@
 }
 }
 
+@media (max-width: 470px){
+    .gridMenu2{
+        position: relative;
+        top: 350px;
+        left: -40px;
+    }
+}
+
 @media (max-width: 430px){
     .secondPriContainerPara{
         margin-left: 2 0px;
@@ -1007,3 +1015,4 @@
         height: 250px;
     }
 }
+
