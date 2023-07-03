@@ -770,8 +770,9 @@
     .gridMenu2{
         position: relative;
         top: 350px;
+        left: -40px;
         margin: 128px $spacing 0 $spacing;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
         grid-template-rows: repeat(3, minmax(300px, 1fr));
     
         div{
