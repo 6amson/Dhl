@@ -3,9 +3,10 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin: 64px $spacing 0 $spacing;
+    margin: 128 px $spacing 0 $spacing;
     align-items: center;
     font-family: $mainFont;
+    
  
     ul{
         list-style-type: none;
@@ -25,6 +26,8 @@
     .secondListF{
         display: flex;
         margin-top: -40px;
+        position: relative;
+        width: 100%;
 
         li{
             padding: 15px;
@@ -56,9 +59,15 @@
         }
     }
 
+    .finalfooterList{
+        position: relative;
+    }
+
     .thirdListF{
         display: flex;
         justify-content: space-between;
+        // width: 100%;
+        // background: olivedrab;
 
         p:last-child{
             background: $mainColor;
@@ -102,16 +111,29 @@
 @media (max-width: 770px){
     .containerFooter{
         display: block;
+        margin: 64px $sspacing 0 $sspacing;
 
         .secondListF{
 
             margin-top: 32px;
+
+            li{
+                padding: 10px;
+            }
         }
 
         .thirdListF{
-            width: 50%;
+            width: 50.5%;
+
+            p:last-child{
+                padding: 2px;
+            }
         }
         
+    }
+
+    .footerfinal{
+        margin: 64px $sspacing 0px $sspacing;
     }
 }
 
